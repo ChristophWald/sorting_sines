@@ -18,6 +18,9 @@ def track_sine_sorting(sorting_function):
 def main(args):
     sorting_functions = {
         "bubblesort": bubblesort,
+        "selectionsort": selectionsort,
+        "insertionsort": insertionsort,
+        "heapsort": heapsort,
         # add more sorting functions here later
     }
     sort_func = sorting_functions.get(args.sort)
@@ -35,7 +38,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--sort",
         type=str,
-        default="bubblesort",
+        default="selectionsort",
     )
     parser.add_argument(
         "--freq",

@@ -1,20 +1,16 @@
 - create sorting routines module
--- bubblesort
+-- bubblesort (done)
 -- quicksort
--- selectionsort
--- heapsort
--- insertion sort
+-- selectionsort (done)
+-- heapsort (done)
+-- insertion sort (done)
 -- counting sort
 -- radix sort
 -- mergesort
 
 -create other modules
--- tracking sine
 -- tracking random (different distributions?)
--- create animation/frames
--- create sound/morph
--- save both
--- play both back simultaneuosly
+-- there is a click at the end of the video (only bubblesort)
 
 CLI
 -real time parameter control
