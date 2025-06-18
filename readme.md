@@ -10,6 +10,7 @@
 
 -create other modules
 -- tracking sine
+-- tracking random (different distributions?)
 -- create animation/frames
 -- create sound/morph
 -- save both
