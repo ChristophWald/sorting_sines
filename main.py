@@ -16,14 +16,31 @@ def track_sine_sorting(sorting_function):
     return steps
 
 def main(args):
+    sort_name = args.sort[0]
+    pivot_strategy = args.sort[1] if sort_name == "quicksort" and len(args.sort) > 1 else None
+
     sorting_functions = {
         "bubblesort": bubblesort,
         "selectionsort": selectionsort,
         "insertionsort": insertionsort,
         "heapsort": heapsort,
-        # add more sorting functions here later
     }
-    sort_func = sorting_functions.get(args.sort)
+    
+    pivot_strategies = {
+        "pivot_first": pivot_first,
+        "pivot_last": pivot_last,
+        "pivot_random": pivot_random,
+        "pivot_middle": pivot_middle,
+    }
+
+    if sort_name == "quicksort":
+        pivot_func = pivot_strategies[pivot_strategy]  # turn string into function
+        def sort_func(arr):
+            return quicksort(arr, pivot_func)
+    else:
+        sort_func = sorting_functions[sort_name]
+
+            
     wavetables = track_sine_sorting(sort_func)
     audio = generate_morphing_wavetable(wavetables, freq=args.freq, morph_speed=args.speed, hold_duration=args.hold)
     if args.save_audio:
@@ -36,9 +53,10 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--sort",
-        type=str,
-        default="selectionsort",
+	"--sort",
+	nargs='+',  # Accepts one or two values
+	type=str,
+	default=["selectionsort"],
     )
     parser.add_argument(
         "--freq",

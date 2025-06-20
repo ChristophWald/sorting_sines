@@ -35,16 +35,16 @@ def _quicksort(A, left, right, steps, pivot_selector):
     _quicksort(A, lmbda + 1, right, steps, pivot_selector)  # Right part
 
 # Example pivot selection strategies:
-def choose_first(A, left, right):
+def pivot_first(A, left, right):
     return left
 
-def choose_last(A, left, right):
+def pivot_last(A, left, right):
     return right - 1
 
-def choose_middle(A, left, right):
+def pivot_middle(A, left, right):
     return (left + right - 1) // 2
 
-def choose_random(A, left, right):
+def pivot_random(A, left, right):
     import random
     return random.randint(left, right - 1)
 
