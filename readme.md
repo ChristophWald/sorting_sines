@@ -1,7 +1,3 @@
-Inspired by the [classic sorting sounds](https://www.youtube.com/watch?v=kPRA0W1kECg) this project sorts sine waves with different sorting algorithms. 
-
----
-
 ### Sorting Sines
 
 Sine being sorted by heapsort
