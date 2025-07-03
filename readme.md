@@ -1,4 +1,8 @@
-Sorting Sines
+Inspired by the [classic sorting sounds](https://www.youtube.com/watch?v=kPRA0W1kECg) this project sorts sine waves with different sorting algorithms. 
+
+---
+
+### Sorting Sines
 
 Sine being sorted by heapsort
 
@@ -8,7 +12,7 @@ Sine being sorted by heapsort
 
 requires moviepy <= 1.0.3
 
-Inspired by the [classic sorting sounds](https://www.youtube.com/watch?v=kPRA0W1kECg) this project sorts sine waves with different sorting algorithms. The sound is derived by playing back the array as a wavetable. The state of the array corresponds to a timbre, the differing sorting algorithms correspond to different timbre changes. An mp4 and a soundfile is created (see examples in outputs).
+Inspired by the [classic sorting sounds](https://www.youtube.com/watch?v=kPRA0W1kECg) this project sorts sine waves with different sorting algorithms.  The sound is derived by playing back the array as a wavetable. The state of the array corresponds to a timbre, the differing sorting algorithms correspond to different timbre changes. An mp4 and a soundfile is created (see examples in outputs).
 
 usage: python3 main.py \[arguments\]
 
