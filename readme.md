@@ -1,6 +1,7 @@
 Sorting Sines
 
 Sine being sorted by heapsort
+
 ![Text](heapsort.png)
 
 
